@@ -54,21 +54,11 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Hero Image') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-row">
+                         
                             <div class="form-group col-md-6">
                                  <div class="custom-file">
                                 <input type="file" class="custom-file-input form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" id="customFile" name="image"  >
-                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                <label class="custom-file-label" for="customFile">{{$herolists->hero_image}}</label>
                                  @if ($errors->has('image'))
                                                   <span class="invalid-feedback" role="alert">
                                                       <strong>{{ $errors->first('image') }}</strong>
@@ -80,7 +70,7 @@
                             </div>
                           
                           </div>
- 
+                    
  
 
                         <div class="form-group row mb-0">
@@ -96,4 +86,5 @@
         </div>
     </div>
 </div>
+
 @endsection

@@ -83,7 +83,27 @@ class HerocpanelController extends Controller
      */
     public function update(Request $request, Herocpanel $herocpanel)
     {
-        //
+        $herolists = Herocpanel::find('1');  
+        if($request->hasFile('image'))
+        {
+           $image = $request->image;
+               // Get filename with extension            
+            $filenameWithExt = $image->getClientOriginalName();
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);       
+            $name =  $filename.'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/img');
+            $imagePath = $destinationPath . "/" . $name;
+            $image->move($destinationPath, $name);
+            $herolists->hero_image = $name;
+        }
+            $herolists->brand = $request->brand;
+            $herolists->hero_title = $request->hero_title;
+            $herolists->hero_description = $request->hero_description;
+            $herolists->save();
+
+            return redirect()->route();
+
     }
 
     /**

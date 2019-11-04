@@ -69,9 +69,10 @@
     </div>
   </nav>
   <!--/ Nav End /-->
+  
 
   <!--/ Intro Skew Star /-->
-  <div id="home" class="intro route bg-image" style="background-image: url(img/intro-bg.jpg)">
+  <div id="home" class="intro route bg-image" style="background-image: url({!! !empty($herodetails->hero_image) ? 'img/' . $herodetails->hero_image :  'http://placehold.it/750x300' !!})">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
