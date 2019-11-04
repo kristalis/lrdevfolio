@@ -14,6 +14,9 @@
                         </div>
                     @endif
 
+                    You are logged in!
+                    <p><a href="{{@url('heroes').'/'.'1'.'/edit'}}" class="btn btn-primary">Edit</a></p>
+
                     <a href="{{ @url('heroes/create') }}">Hero Details</a>
                 </div>
             </div>
