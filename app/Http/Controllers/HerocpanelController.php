@@ -34,7 +34,7 @@ class HerocpanelController extends Controller
      */
     public function create()
     {
-        return view('welcome');
+        return view('cpanel.herocpanel');
     }
 
     /**
