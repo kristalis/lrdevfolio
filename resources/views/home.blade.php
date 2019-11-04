@@ -14,12 +14,8 @@
                         </div>
                     @endif
 
-<<<<<<< HEAD
                     You are logged in!
-                    <a href="{{ @url('heroes/edit') }}">Hero details</a>
-=======
                     <a href="{{ @url('heroes/create') }}">Hero Details</a>
->>>>>>> cpanel
                 </div>
             </div>
         </div>
