@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/', 'DevfolioController@index')->name('Lrdevefolio');
+Route::get('/', 'DevfolioController@index')->name('Lrdevfolio');
 
 Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');

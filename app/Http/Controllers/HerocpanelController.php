@@ -67,9 +67,9 @@ class HerocpanelController extends Controller
      * @param  \App\Herocpanel  $herocpanel
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        $herolists = \App\Herocpanel::find('1');         
+        $herolists = \App\Herocpanel::find($id);         
         return view('cpanel.herocpanel',['herolists' => $herolists]);
 
     }
@@ -81,9 +81,9 @@ class HerocpanelController extends Controller
      * @param  \App\Herocpanel  $herocpanel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Herocpanel $herocpanel)
+    public function update(Request $request, $id)
     {
-        $herolists = Herocpanel::find('1');  
+        $herolists = Herocpanel::find($id);  
         if($request->hasFile('image'))
         {
            $image = $request->image;
@@ -102,7 +102,7 @@ class HerocpanelController extends Controller
             $herolists->hero_description = $request->hero_description;
             $herolists->save();
 
-            return redirect()->route();
+            return redirect()->route('Lrdevfolio');
 
     }
 
