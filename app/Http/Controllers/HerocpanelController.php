@@ -34,7 +34,9 @@ class HerocpanelController extends Controller
      */
     public function create()
     {
-        return view('welcome');
+        $herolists = \App\Herocpanel::find('1');         
+        return view('cpanel.herocpanel',['herolists' => $herolists]);
+
     }
 
     /**
@@ -67,8 +69,8 @@ class HerocpanelController extends Controller
      */
     public function edit()
     {
-      //  $herolists= \App\Herocpanel::find('1');         
-        return view('cpanel.herocpanel');
+        $herolists = \App\Herocpanel::find('1');         
+        return view('cpanel.herocpanel',['herolists' => $herolists]);
 
     }
 
