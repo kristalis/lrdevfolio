@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class HerocpanelController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +24,8 @@ class HerocpanelController extends Controller
      */
     public function index()
     {
-        //
-    }
+       
+   }
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +34,7 @@ class HerocpanelController extends Controller
      */
     public function create()
     {
-        //
+        return view('welcome');
     }
 
     /**
@@ -55,9 +65,11 @@ class HerocpanelController extends Controller
      * @param  \App\Herocpanel  $herocpanel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Herocpanel $herocpanel)
+    public function edit()
     {
-        //
+      //  $herolists= \App\Herocpanel::find('1');         
+        return view('cpanel.herocpanel');
+
     }
 
     /**
