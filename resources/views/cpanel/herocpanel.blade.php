@@ -64,7 +64,22 @@
                                 @endif
                             </div>
                         </div>
- 
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                 <div class="custom-file">
+                                <input type="file" class="custom-file-input form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" id="customFile" name="image"  >
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                 @if ($errors->has('image'))
+                                                  <span class="invalid-feedback" role="alert">
+                                                      <strong>{{ $errors->first('image') }}</strong>
+                                                  </span>
+                                              @endif
+                                  </div>
+                                   
+              
+                            </div>
+                          
+                          </div>
  
  
 
