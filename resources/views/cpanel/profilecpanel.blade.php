@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Hero Details') }}</div>
+                <div class="card-header">{{ __('Profile Details') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('heroes.update', $herolists->id) }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('profiles.update', $profiles->id) }}" enctype="multipart/form-data">
                         @csrf
                          @method('PATCH')
 
