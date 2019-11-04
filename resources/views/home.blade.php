@@ -15,9 +15,9 @@
                     @endif
 
                     You are logged in!
-                    <p><a href="{{@url('heroes').'/'.'1'.'/edit'}}" class="btn btn-primary">Edit</a></p>
+                    <p><a href="{{@url('heroes').'/'.'1'.'/edit'}}" class="btn btn-primary">Edit Hero</a></p>
 
-                    <a href="{{ @url('heroes/create') }}">Hero Details</a>
+                    <p><a href="{{@url('profiles').'/'.'1'.'/edit'}}" class="btn btn-primary">Edit Profiles</a></p>
                 </div>
             </div>
         </div>
