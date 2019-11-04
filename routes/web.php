@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('devfolio');
-});
+
+Route::get('/', 'DevfolioController@index')->name('Lrdevefolio');
 
 Auth::routes(['verify' => true]);
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource ('/heroes', 'HerocpanelController');
