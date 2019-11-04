@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <a href="{{ @url('heroes/edit') }}">Hero Details</a>
+                    <a href="{{ @url('heroes/create') }}">Hero Details</a>
                 </div>
             </div>
         </div>

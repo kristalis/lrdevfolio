@@ -24,6 +24,7 @@ class HerocpanelController extends Controller
      */
     public function index()
     {
+       
    }
 
     /**
@@ -33,7 +34,7 @@ class HerocpanelController extends Controller
      */
     public function create()
     {
-        //
+        return view('welcome');
     }
 
     /**
@@ -64,10 +65,10 @@ class HerocpanelController extends Controller
      * @param  \App\Herocpanel  $herocpanel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Herocpanel $herocpanel)
+    public function edit()
     {
-        $herolists= \App\Herocpanel::find('1');         
-        return view('cpanel.herocpanel', ['herolists' => $herolists]);
+      //  $herolists= \App\Herocpanel::find('1');         
+        return view('cpanel.herocpanel');
 
     }
 
