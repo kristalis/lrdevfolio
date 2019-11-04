@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="{{ @url('heroes/edit') }}">Hero Details</a>
                 </div>
             </div>
         </div>
