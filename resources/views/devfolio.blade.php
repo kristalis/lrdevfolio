@@ -97,15 +97,15 @@
                 <div class="row">
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
-                      <img src="img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                      <img src="{!! !empty($profiledetails->profile_image) ? 'img/' . $profiledetails->profile_image :  'http://placehold.it/750x300' !!}" class="img-fluid rounded b-shadow-a" alt="">
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-7">
                     <div class="about-info">
-                      <p><span class="title-s">Name: </span> <span>Morgan Freeman</span></p>
-                      <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
-                      <p><span class="title-s">Email: </span> <span>contact@example.com</span></p>
-                      <p><span class="title-s">Phone: </span> <span>(617) 557-0089</span></p>
+                      <p><span class="title-s">Name: </span> <span>{{$profiledetails->profile_name}}</span></p>
+                      <p><span class="title-s">Profile: </span> <span>{{$profiledetails->profile_title}}</span></p>
+                      <p><span class="title-s">Email: </span> <span>{{$profiledetails->profile_email}}</span></p>
+                      <p><span class="title-s">Phone: </span> <span>{{$profiledetails->profile_phone}}</span></p>
                     </div>
                   </div>
                 </div>
@@ -141,20 +141,7 @@
                     </h5>
                   </div>
                   <p class="lead">
-                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
-                    imperdiet et, porttitor
-                    at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
-                    porttitor accumsan tincidunt.
-                  </p>
-                  <p class="lead">
-                    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
-                    porttitor volutpat. Vestibulum
-                    ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
-                  </p>
-                  <p class="lead">
-                    Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-                    Nulla porttitor accumsan
-                    tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                    {{$profiledetails->profile_aboutme}}
                   </p>
                 </div>
               </div>

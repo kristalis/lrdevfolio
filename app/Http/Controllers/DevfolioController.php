@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Herocpanel;
+use App\Profile;
 use Illuminate\Http\Request;
 
 class DevfolioController extends Controller
@@ -16,7 +17,8 @@ class DevfolioController extends Controller
     {
 
 
-        $herodetails = \App\Herocpanel::find('1');         
-        return view('devfolio',['herodetails' => $herodetails]);
+        $herodetails = Herocpanel::find('1');
+        $profiledetails = Profile::find('1');          
+        return view('devfolio',['herodetails' => $herodetails, 'profiledetails' => $profiledetails ]);
     }
 }
