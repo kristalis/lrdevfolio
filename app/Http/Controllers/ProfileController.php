@@ -82,9 +82,9 @@ class ProfileController extends Controller
             $destinationPath = public_path('/img');
             $imagePath = $destinationPath . "/" . $name;
             $image->move($destinationPath, $name);
-            $proiles->profile_image = $name;
+            $profiles->profile_image = $name;
         }
-            $profiles->profile_name = $request->name;
+            $profiles->profile_name = $request->profile_name;
             $profiles->profile_title = $request->profile_title;
             $profiles->profile_email = $request->profile_email;
             $profiles->profile_phone = $request->profile_phone;

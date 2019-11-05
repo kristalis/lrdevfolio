@@ -18,7 +18,7 @@
                             <div class="form-group col-md-6">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" id="customFile" name="image"  >
-                                    <label class="custom-file-label" for="customFile"> {{$profiles->profile_image}} File</label>
+                                    <label class="custom-file-label" for="customFile"> {{$profiles->profile_image}}</label>
                                     @if ($errors->has('image'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('image') }}</strong>
@@ -33,7 +33,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="brand" value="">
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="profile_name" value="{{$profiles->profile_name}} ">
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -47,7 +47,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Profile') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="hero_title" value="" >
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="profile_title" value="{{$profiles->profile_title}} " >
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -60,7 +60,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="profile_email" value="{{ $profiles->profile_email }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -74,7 +74,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="hero_description" value="" required >
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="profile_phone" value="{{$profiles->profile_phone}}" required >
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -87,7 +87,7 @@
                     
                         <div class="form-group">
               
-                            <textarea class="form-control{{ $errors->has('body') ? ' is-invalid' : '' }}" name="body" id="body" placeholder="Enter a brief about you" rows="8" ></textarea>
+                            <textarea class="form-control{{ $errors->has('body') ? ' is-invalid' : '' }}" name="profile_aboutme" id="body" placeholder="Enter a brief about you" rows="8" >{{$profiles->profile_aboutme}}</textarea>
              
                                              @if ($errors->has('body'))
                                                  <span class="invalid-feedback" role="alert">
